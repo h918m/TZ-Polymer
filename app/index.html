@@ -63,34 +63,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
     <style is="custom-style">
-      paper-header-panel {
-        --paper-header-panel-shadow: {
-          height: 0px;
-          bottom: 0px;
-          box-shadow: 0;
-
-        };
-        overflow: hidden;
+      .toolbar{
+        background-color: #00AA00;
       }
       .main-content {
-
+        background-color: grey;
+        overflow: hidden;
       }
-      TZ-content {
-        flex: 1;
-        display: flex;
+      nav {
+        background-color: white;
       }
-
+      main {
+        background-color: #00e676;
+        min-width: 300px;
+      }
+      aside {
+        background-color: #00b0ff;
+      }
+      nav, main, aside {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      nav, aside {
+        width: 200px;
+      }
     </style>
 <!--
-    <paper-header-panel class="fit" justify="justified" mode="cover">
-    <TZ-toolbar foo="123"></TZ-toolbar>
-  <div class="content fit">
-    <TZ-content></TZ-content>
-
-  </div>
-    </paper-header-panel>
--->
-
     <paper-header-panel>
       <div class="paper-header">
         <TZ-toolbar foo="123"></TZ-toolbar>
@@ -99,18 +97,164 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <TZ-content></TZ-content>
       </div>
     </paper-header-panel>
-    <!--
-      <div class="panel" style="background-color: green">
-        panel
-      </div>
-      <div class="content layout horizontal" style="background-color: white">
-
-        <nav style="background-color: grey">nav nav</nav>
-        <aside style="background-color: bisque">aside</aside>
-        <div class="main-content" style="background-color: gold">content</div>
-      </div>
 -->
 
+      <div class="toolbar flex-ratio-1">TOOLBAR</div>
+      <div class="layout horizontal justify wrap main-content flexchild flex">
+        <nav>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+          <div>navigation</div>
+        </nav>
+        <main class="flex">
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+          <div>content</div>
+        </main>
+        <aside>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+          <div>aside</div>
+        </aside>
+      </div>
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
     <!--
     <paper-toast id="caching-complete"
