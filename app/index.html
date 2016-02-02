@@ -63,7 +63,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
 
-    <iron-media-query query="(min-width: 600px)" query-matches="{{wide}}"></iron-media-query>
+    <iron-media-query query="(min-width: 1000px)" query-matches="{{wide}}"></iron-media-query>
     <style is="custom-style">
       .toolbar{
         background-color: #00AA00;
@@ -101,9 +101,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </paper-header-panel>
 -->
 
-      <div class="toolbar">TOOLBAR</div>
+      <div class="toolbar">
+        <template is="dom-if" if="{{ !wide }}">
+          <button>menu</button>
+        </template>
+
+        Toolbar
+      </div>
       <div class="layout horizontal justify wrap main-content flexchild flex">
-        <template is="dom-if" if="{{wide}}">
+        <template is="dom-if" hidden if="{{wide}}" >
             <nav class="flex-2">
 
               <div>navigation</div>
