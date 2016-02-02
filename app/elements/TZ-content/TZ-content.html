@@ -8,20 +8,27 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="TZ-toolbar">
+
+<dom-module id="TZ-content">
   <template>
     <style>
       :host {
-
+        height: 100%;
+        background-color: blue;
       }
-
+      .layout.horizontal {
+        justify-content: space-between;
+        align-content: stretch;
+        flex: 1 1 100%;
+      }
     </style>
-      <paper-toolbar>
-        <TZ-toolbar-nav></TZ-toolbar-nav>
-        <TZ-toolbar-search></TZ-toolbar-search>
-        <TZ-toolbar-tools></TZ-toolbar-tools>
-        <TZ-toolbar-user-menu></TZ-toolbar-user-menu>
-      </paper-toolbar>
+
+      <div class="layout horizontal">
+        <TZ-content-nav></TZ-content-nav>
+        <TZ-content-aside></TZ-content-aside>
+        <div style="background-color: grey; display: flex; flex: 1 1 auto; order: 1">wtf</div>
+      </div>
+
 
   </template>
   <script>
@@ -29,12 +36,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     'use strict';
 
     Polymer({
-      is: 'TZ-toolbar',
+      is: 'TZ-content',
 
       properties: {
         foo: {
           type: String,
-          value: 'TZ-toolbar',
+          value: 'TZ-content',
           notify: true
         }
       }

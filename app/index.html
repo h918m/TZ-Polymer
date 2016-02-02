@@ -63,9 +63,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
     <style is="custom-style">
-    </style>
-    <TZ-toolbar foo="123"></TZ-toolbar>
+      paper-header-panel {
+        --paper-header-panel-shadow: {
+          height: 0px;
+          bottom: 0px;
+          box-shadow: 0;
 
+        };
+        overflow: hidden;
+      }
+      .main-content {
+
+      }
+      TZ-content {
+        flex: 1;
+        display: flex;
+      }
+
+    </style>
+<!--
+    <paper-header-panel class="fit" justify="justified" mode="cover">
+    <TZ-toolbar foo="123"></TZ-toolbar>
+  <div class="content fit">
+    <TZ-content></TZ-content>
+
+  </div>
+    </paper-header-panel>
+-->
+
+    <paper-header-panel>
+      <div class="paper-header">
+        <TZ-toolbar foo="123"></TZ-toolbar>
+      </div>
+      <div class="fit">
+<TZ-content></TZ-content>
+      </div>
+    </paper-header-panel>
+    <!--
+      <div class="panel" style="background-color: green">
+        panel
+      </div>
+      <div class="content layout horizontal" style="background-color: white">
+
+        <nav style="background-color: grey">nav nav</nav>
+        <aside style="background-color: bisque">aside</aside>
+        <div class="main-content" style="background-color: gold">content</div>
+      </div>
+-->
 
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
     <!--

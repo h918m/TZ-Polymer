@@ -8,33 +8,31 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="TZ-toolbar">
+<dom-module id="TZ-content-aside">
   <template>
     <style>
       :host {
-
+        width: 200px;
+        background-color: #00cc99;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: auto;
+        order: 2;
       }
-
     </style>
-      <paper-toolbar>
-        <TZ-toolbar-nav></TZ-toolbar-nav>
-        <TZ-toolbar-search></TZ-toolbar-search>
-        <TZ-toolbar-tools></TZ-toolbar-tools>
-        <TZ-toolbar-user-menu></TZ-toolbar-user-menu>
-      </paper-toolbar>
-
+    <div>ASIDE</div>
   </template>
   <script>
   (function() {
     'use strict';
 
     Polymer({
-      is: 'TZ-toolbar',
+      is: 'TZ-content-aside',
 
       properties: {
         foo: {
           type: String,
-          value: 'TZ-toolbar',
+          value: 'TZ-content-aside',
           notify: true
         }
       }
