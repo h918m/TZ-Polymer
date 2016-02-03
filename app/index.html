@@ -47,6 +47,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
@@ -62,23 +65,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved>
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
+  <iron-media-query query="(min-width: 1000px)" query-matches="{{wide}}"></iron-media-query>
 
-    <iron-media-query query="(min-width: 1000px)" query-matches="{{wide}}"></iron-media-query>
     <style is="custom-style">
-      .toolbar{
-        background-color: #00AA00;
+
+      paper-toolbar .title {
+        margin: 0;
       }
-      .main-content {
-        background-color: grey;
-        min-height: 10px;
+      paper-header-panel {
+        --paper-drawer-panel-right-drawer-container: {
+          background-color: black;
+        };
       }
       nav {
         background-color: white;
       }
-      main {
-        background-color: #00e676;
-        min-width: 300px;
-      }
+      div[main]{
+        background-color: #b0af99;
+       }
       aside {
         background-color: #00b0ff;
       }
@@ -89,9 +93,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       nav, aside {
 
       }
+      nav[wide-layout="false"] {
+        display: none;
+      }
+
     </style>
-<!--
-    <paper-header-panel>
+
+<!--    <paper-header-panel>
       <div class="paper-header">
         <TZ-toolbar foo="123"></TZ-toolbar>
       </div>
@@ -100,17 +108,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
     </paper-header-panel>
 -->
-
+<!--
       <div class="toolbar">
-        <template is="dom-if" if="{{ !wide }}">
-          <button>menu</button>
+        <template is="dom-if" if="{{!wide}}">
+          <TZ-toolbar-menu-button></TZ-toolbar-menu-button>
         </template>
 
         Toolbar
       </div>
       <div class="layout horizontal justify wrap main-content flexchild flex">
         <template is="dom-if"  if="{{wide}}" >
-            <nav class="flex-2">
+            <nav class="flex-2" wide-layout$="{{wide}}">
 
               <div>navigation</div>
               <div>navigation</div>
@@ -234,6 +242,133 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </main>
 
       </div>
+
+      -->
+    <paper-header-panel>
+      <paper-toolbar>
+        <template is="dom-if" if="{{ !wide }}">
+          <paper-icon-button icon="menu" onClick="document.querySelector('#panel').togglePanel()"></paper-icon-button>
+
+        </template>
+        <span class="title">Team Zeus</span>
+
+      </paper-toolbar>
+
+      <paper-drawer-panel id="panel">
+        <div drawer >
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+        </div>
+        <main main>
+          <paper-drawer-panel id="panel2" right-drawer>
+            <div drawer class="flex" style="overflow-y: auto">
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+            </div>
+            <main main>
+              <template is="dom-if" if="{{ !wide }}">
+                <paper-icon-button icon="menu" onClick="document.querySelector('#panel2').togglePanel()" style="position: fixed; "></paper-icon-button>
+
+              </template>
+            </main>
+          </paper-drawer-panel>
+        </main>
+      </paper-drawer-panel>
+    </paper-header-panel>
+
+
+
+    <!--<paper-drawer-panel>
+      <paper-header-panel drawer>
+        <paper-toolbar>
+          <div>Application</div>
+        </paper-toolbar>
+        <div> Drawer content... </div>
+      </paper-header-panel>
+      <paper-header-panel main>
+        <paper-toolbar>
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div>Title</div>
+        </paper-toolbar>
+        <div> Main content... </div>
+      </paper-header-panel>
+    </paper-drawer-panel>-->
+  <!--    <paper-header-panel flex main>
+        <paper-toolbar>
+          <paper-ripple center></paper-ripple>
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div flex class="indent title">Heading</div>
+        </paper-toolbar>
+        <div>
+          <paper-drawer-panel responsive-width="800px">
+            <paper-header-panel flex drawer>
+
+              <div class="bottom row fit bottom">
+                CONTENT
+              </div>
+            </paper-header-panel>
+          </paper-drawer-panel>
+        </div>
+      </paper-header-panel>
+-->
+<!--
+    <paper-drawer-panel responsive-width="800px">
+      <paper-header-panel flex drawer>
+        <paper-toolbar>
+          <div class="title middle">aaa</div>
+        </paper-toolbar>
+        <div class="bottom row fit bottom">
+        </div>
+      </paper-header-panel>
+      <paper-header-panel flex main>
+        <paper-toolbar>
+          <paper-ripple center></paper-ripple>
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div flex class="indent title">Heading</div>
+        </paper-toolbar>
+        <div>
+
+        </div>
+      </paper-header-panel>
+    </paper-drawer-panel>
+-->
+
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
     <!--
     <paper-toast id="caching-complete"
@@ -253,7 +388,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     -->
 
   </template>
-
+  <script>
+    Polymer({
+    is: 'menu-button',
+    handleClick: function(){
+    alert('clicked');
+    }
+    });
+  </script>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
