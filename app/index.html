@@ -73,27 +73,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 0;
       }
       paper-drawer-panel {
-        --paper-drawer-panel-scrim-opacity: 0.2
-      }
-      nav {
-        background-color: white;
-      }
-      div[main]{
-        background-color: #b0af99;
-       }
-      aside {
-        background-color: #00b0ff;
-      }
-      nav, main, aside {
-        overflow-x: hidden;
-        overflow-y: auto;
-      }
-      nav, aside {
+        --paper-drawer-panel-scrim-opacity:1;
+        --paper-drawer-panel-right-drawer-container: {
+          background-color: #00A000;
+        }
 
       }
-      nav[wide-layout="false"] {
-        display: none;
-      }
+
 
     </style>
 
@@ -329,17 +315,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div>aaa</div>
           <div>aaa</div>
           <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
+          <div>aaa</div>
         </div>
       </paper-header-panel>
       <paper-header-panel main>
         <paper-toolbar>
           <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
           <div class="title">Team Zeus</div>
-
-        </paper-toolbar>
+         <!-- <paper-menu-button>
+            <paper-icon-button icon="menu" class="dropdown-trigger" alt="menu"></paper-icon-button>
+            <paper-menu class="dropdown-content">
+              <template is="dom-repeat" items="[[letters]]" as="letter">
+                <paper-item>one thing</paper-item>
+                <paper-item>one other think</paper-item>
+                <paper-item>one other thin</paper-item>
+              </template>
+            </paper-menu>
+          </paper-menu-button>
+        </paper-toolbar>-->
 
           <paper-drawer-panel id="panel2" right-drawer force-narrow>
-            <div drawer style="overflow-y: auto">
+            <div drawer style="overflow-y: auto;">
               <paper-toolbar>
                 <div>;dalskfj</div>
               </paper-toolbar>
@@ -363,9 +404,59 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div>bbb</div>
               <div>bbb</div>
               <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
+              <div>bbb</div>
             </div>
-            <main main style="background-color: #AA3333; padding: 20px">
+            <section main style="background-color: #AA3333; padding: 20px 60px 20px 20px; overflow-y: auto" class="flex" >
               <paper-icon-button icon="menu" onClick="document.querySelector('#panel2').togglePanel()" style="position: fixed; top: 80px; right: 20px;"></paper-icon-button>
+            <div>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis iaculis purus, ac porta nisl vehicula non. Pellentesque iaculis, ipsum ut placerat viverra, nisl felis tempor sem, quis dictum quam libero eget mi. Fusce in ex tempor, convallis lorem non, scelerisque augue. Proin laoreet maximus justo quis imperdiet. Pellentesque nibh urna, mattis at tincidunt in, rutrum at urna. In nec commodo massa. Sed ornare urna ipsum, vitae eleifend nulla mattis at. Sed hendrerit eleifend tellus ac tristique. Fusce massa metus, mollis non porttitor at, malesuada quis eros.
 
               Curabitur finibus mauris scelerisque scelerisque malesuada. Suspendisse in velit libero. Duis mattis rutrum turpis a luctus. Phasellus accumsan ultricies rutrum. Pellentesque in facilisis mi. Phasellus dapibus justo elit, et tempus est consectetur eu. Duis mi sem, fermentum ut elementum a, scelerisque id ante. Fusce pulvinar, tellus in pretium suscipit, felis nunc ultricies velit, scelerisque venenatis nulla velit ac felis. Aenean sed lorem ac ex blandit dictum ac quis urna. Aliquam erat volutpat. Donec malesuada in sapien quis consequat. Mauris vel blandit risus. Vestibulum eget sapien eu nisi suscipit congue. Mauris dignissim eget ex et faucibus. Curabitur a congue enim, sed scelerisque purus.
@@ -467,7 +558,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               Nulla et nulla libero. Cras consequat, metus at ullamcorper hendrerit, nisi orci mollis lacus, vel dapibus augue leo vel massa. Quisque sed malesuada orci. Nullam ac mauris sit amet nisl vehicula pulvinar. Nullam gravida erat vitae mauris efficitur vehicula. Praesent diam quam, gravida ac ligula a, volutpat ornare massa. Mauris non tempus nibh. Vivamus quam mi, venenatis nec risus sed, faucibus condimentum nulla. Sed vitae est viverra, sagittis tortor non, pulvinar diam. Sed condimentum pharetra pellentesque. Quisque at enim pharetra, porta magna id, fringilla diam.
 
               Vivamus lacinia non ligula id mollis. Donec eleifend lorem sem, in bibendum orci tincidunt eu. Ut pharetra luctus nulla, nec finibus nisl imperdiet et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus auctor dignissim ante a molestie. Vivamus facilisis tincidunt fermentum. In mollis mauris at nibh gravida ultricies. Mauris accumsan ex vitae massa hendrerit finibus et vulputate nunc. Vivamus ullamcorper nisi aliquet, cursus orci sit amet, ullamcorper nisi. Suspendisse augue lectus, luctus eget laoreet ac, euismod quis metus.
-              </main>
+              </div>
+            </section>
           </paper-drawer-panel>
       </paper-header-panel>
     </paper-drawer-panel>
