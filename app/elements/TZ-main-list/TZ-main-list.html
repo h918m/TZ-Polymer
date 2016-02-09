@@ -17,36 +17,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
       }
       paper-card {
-        border: 1px solid #c1c1c1;
         width: 100%;
         --paper-card-header-text: {
           font-size: 1em;
         };
-        --paper-card-header: {
-          background-color: white;
-          border-bottom: 1px solid #c1c1c1;
-        };
-
       }
+
       iron-icon {
         --iron-icon-width: 64px;
         --iron-icon-height: 64px;
+        --iron-icon-stroke-color: #c1c1c1;
+        --iron-icon-fill-color: #c1c1c1;
+        float: left;
+        margin-right: 20px;
       }
+      paper-item:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+      paper-item-body > * {
+        float: left;
+      }
+
+
+      .msg-detail {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        height: 120px;
+      }
+
     </style>
     <template is="dom-repeat" items="{{ listItems }}">
-      <moment-element datetime="{{ item.date }}" output-format="MMM DD[,] YYYY"></moment-element>
     <paper-card class="full-width-card" heading="{{ _dateFilter(item.date) }}">
       <div class="card-content">
         <paper-listbox>
-          <template is="dom-repeat" items="{{ item.messages }}">
+          <template is="dom-repeat" items="{{ item.messages }}" as="message">
             <paper-item>
-              <iron-icon icon="account-circle"></iron-icon>
-              <paper-item-body>
-                <div>{{ item.author }}</div>
-                <div>{{ item.msg }}</div>
+              <paper-item-body class="layout horizontal flex flex">
+                <iron-icon icon="account-circle"></iron-icon>
+                <div class="">
+                  <div>{{ message.author }}</div>
+                  <div>{{ message.msg }}</div>
+                </div>
               </paper-item-body>
             </paper-item>
-            <div class="space"></div>
           </template>
 
 
@@ -65,7 +78,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         if (!date) {
           return;
         }
-        return date.getDate() + '. ' + date.getMonth() +  '.' + date.getFullYear();
+        return date.getDate() + '.' + date.getMonth() +  '. ' + date.getFullYear();
       },
       ready: function() {
         this.listItems = [
@@ -78,9 +91,105 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 msg: 'test message #1',
               },
               {
-                author: 'Jan Smejkal',
+                author: 'Jan Jinej',
                 date: new Date(),
                 msg: 'test message #2'
+              }
+            ]
+          },
+          {
+            date: new Date(),
+            messages: [
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #3',
+              },
+              {
+                author: 'Jan Smejkal',
+                date: new Date(),
+                msg: 'test message #4'
+              }
+            ]
+          },
+          {
+            date: new Date(),
+            messages: [
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #5',
+              },
+              {
+                author: 'Jan Smejkal',
+                date: new Date(),
+                msg: 'test message #6',
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #7'
+              }
+            ]
+          },
+          {
+            date: new Date(),
+            messages: [
+              {
+                author: 'Jan Smejkal',
+                date: new Date(),
+                msg: 'test message #8',
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #9'
+              }
+            ]
+          },
+          {
+            date: new Date(),
+            messages: [
+              {
+                author: 'Jan Smejkal',
+                date: new Date(),
+                msg: 'test message #10',
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #11'
+              }
+            ]
+          },
+          {
+            date: new Date(),
+            messages: [
+              {
+                author: 'Jan Smejkal',
+                date: new Date(),
+                msg: 'test message #12',
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #13'
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #14'
+              },
+
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #15'
+              },
+              {
+                author: 'Jan Jinej',
+                date: new Date(),
+                msg: 'test message #16'
               }
             ]
           }
