@@ -72,26 +72,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       paper-toolbar .title {
         margin: 0;
       }
-      paper-drawer-panel {
-
-
-      }
-
-      paper-card {
-        border: 1px solid #c1c1c1;
-        --paper-card-header-text: {
-          font-size: 1em;
-        };
-        --paper-card-header: {
-          font-size: 1em;
-          background-color: white;
-          border-bottom: 1px solid #c1c1c1;
-        }
-      }
-
-      .full-width-card {
-        width: 100%;
-      }
 
 
     </style>
@@ -143,73 +123,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               Something <br/>
             </div>
             <section main class="flex" style="overflow-y: auto; overflow-x: hidden; height: 100%;" >
-
-                <paper-card class="full-width-card" heading="heading">
-                  <div class="card-content">
-                    <paper-listbox>
-                      <paper-item>
-                        <iron-icon icon="account-circle"></iron-icon>
-                        <paper-item-body>
-                          <div>Show your status</div>
-
-                        </paper-item-body>
-                      </paper-item>
-                      <paper-item>
-                        <iron-icon icon="account-circle"></iron-icon>
-                        <paper-item-body>
-                          <div>Show your status</div>
-
-                        </paper-item-body>
-                      </paper-item>
-                      <paper-item>
-                        <iron-icon icon="account-circle"></iron-icon>
-                        <paper-item-body>
-                          <div>Show your status</div>
-
-                        </paper-item-body>
-                      </paper-item>
-                  </paper-listbox>
-
-                  </div>
-                </paper-card>
-              <paper-card class="full-width-card" heading="heading">
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card" heading="heading">
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card" heading="heading">
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card><paper-card class="full-width-card" heading="heading">
-              <div class="card-content">
-                <paper-icon-item>
-                  <iron-icon icon="favorite" item-icon></iron-icon>
-                  <div>this is content</div>
-                </paper-icon-item>
-              </div>
-            </paper-card><paper-card class="full-width-card" heading="heading">
-              <div class="card-content">
-                <paper-icon-item>
-                  <iron-icon icon="favorite" item-icon></iron-icon>
-                  <div>this is content</div>
-                </paper-icon-item>
-              </div>
-            </paper-card>
+              <TZ-main></TZ-main>
               <paper-icon-button icon="menu" onClick="document.querySelector('#panel2').togglePanel()" style="position: fixed; top: 80px; right: 40px;"></paper-icon-button>
 
 
@@ -220,12 +134,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </paper-drawer-panel>
   </template>
   <script>
-    Polymer({
-    is: 'menu-button',
-    handleClick: function(){
-    alert('clicked');
-    }
-    });
+
   </script>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
