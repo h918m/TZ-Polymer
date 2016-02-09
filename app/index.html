@@ -73,15 +73,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 0;
       }
       paper-drawer-panel {
-        --paper-drawer-panel-scrim-opacity:1;
-        --paper-drawer-panel-right-drawer-container: {
 
-        }
 
       }
 
-      paper-card paper-toolbar{
-        --paper-toolbar-background: white;
+      paper-card {
+        border: 1px solid #c1c1c1;
+        --paper-card-header-text: {
+          font-size: 1em;
+        };
+        --paper-card-header: {
+          font-size: 1em;
+          background-color: white;
+          border-bottom: 1px solid #c1c1c1;
+        }
       }
 
       .full-width-card {
@@ -110,6 +115,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class="title">Team Zeus</div>
           <paper-menu-button paper-menu-button  horizontal-align="right" horizontal-offset="20" vertical-align="top" vertical-offset="50">
             <paper-icon-button icon="apps" class="dropdown-trigger" alt="main menu"></paper-icon-button>
+
             <paper-menu class="dropdown-content">
               <paper-item>
                 <iron-icon icon="communication:chat"></iron-icon>
@@ -128,7 +134,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </paper-toolbar>
         <div>
           <paper-drawer-panel id="panel2" right-drawer narrow responsive-width="1919px">
-            <div drawer style="overflow-y: auto; overflow-x: hidden">
+            <div drawer style="overflow-y: auto; overflow-x: hidden;">
               <paper-toolbar>
                 <div>Users List</div>
               </paper-toolbar>
@@ -136,13 +142,67 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               Something <br/>
               Something <br/>
             </div>
-            <section main class="flex" style="overflow-y: auto; overflow-x: hidden; height: 100% padding: 20px 60px 20px 20px;" >
-              <paper-icon-button icon="menu" onClick="document.querySelector('#panel2').togglePanel()" style="position: fixed; top: 80px; right: 20px;"></paper-icon-button>
-              <paper-card class="full-width-card">
-                <paper-scroll-header-panel>
-                  <paper-toolbar>Header</paper-toolbar>
-                  <div>Content goes here...</div>
-                </paper-scroll-header-panel>
+            <section main class="flex" style="overflow-y: auto; overflow-x: hidden; height: 100%;" >
+
+                <paper-card class="full-width-card" heading="heading">
+                  <div class="card-content">
+                    <paper-listbox>
+                      <paper-item>
+                        <iron-icon icon="account-circle"></iron-icon>
+                        <paper-item-body>
+                          <div>Show your status</div>
+
+                        </paper-item-body>
+                      </paper-item>
+                      <paper-item>
+                        <iron-icon icon="account-circle"></iron-icon>
+                        <paper-item-body>
+                          <div>Show your status</div>
+
+                        </paper-item-body>
+                      </paper-item>
+                      <paper-item>
+                        <iron-icon icon="account-circle"></iron-icon>
+                        <paper-item-body>
+                          <div>Show your status</div>
+
+                        </paper-item-body>
+                      </paper-item>
+                  </paper-listbox>
+
+                  </div>
+                </paper-card>
+              <paper-card class="full-width-card" heading="heading">
+                <div class="card-content">
+                  <paper-icon-item>
+                    <iron-icon icon="favorite" item-icon></iron-icon>
+                    <div>this is content</div>
+                  </paper-icon-item>
+                </div>
+              </paper-card>
+              <paper-card class="full-width-card" heading="heading">
+                <div class="card-content">
+                  <paper-icon-item>
+                    <iron-icon icon="favorite" item-icon></iron-icon>
+                    <div>this is content</div>
+                  </paper-icon-item>
+                </div>
+              </paper-card>
+              <paper-card class="full-width-card" heading="heading">
+                <div class="card-content">
+                  <paper-icon-item>
+                    <iron-icon icon="favorite" item-icon></iron-icon>
+                    <div>this is content</div>
+                  </paper-icon-item>
+                </div>
+              </paper-card><paper-card class="full-width-card" heading="heading">
+              <div class="card-content">
+                <paper-icon-item>
+                  <iron-icon icon="favorite" item-icon></iron-icon>
+                  <div>this is content</div>
+                </paper-icon-item>
+              </div>
+            </paper-card><paper-card class="full-width-card" heading="heading">
               <div class="card-content">
                 <paper-icon-item>
                   <iron-icon icon="favorite" item-icon></iron-icon>
@@ -150,162 +210,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </paper-icon-item>
               </div>
             </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
-              <paper-card class="full-width-card">
-                <paper-toolbar>
-                  <div> header?
-                    header?</div>
-                </paper-toolbar>
-                <div class="card-content">
-                  <paper-icon-item>
-                    <iron-icon icon="favorite" item-icon></iron-icon>
-                    <div>this is content</div>
-                  </paper-icon-item>
-                </div>
-              </paper-card>
+              <paper-icon-button icon="menu" onClick="document.querySelector('#panel2').togglePanel()" style="position: fixed; top: 80px; right: 40px;"></paper-icon-button>
+
+
             </section>
           </paper-drawer-panel>
         </div>
