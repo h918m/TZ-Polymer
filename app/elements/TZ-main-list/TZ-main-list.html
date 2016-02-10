@@ -8,7 +8,6 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="..\..\bower_components/polymer/polymer.html">
 
 <dom-module id="TZ-main-list">
   <template>
@@ -23,43 +22,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
       }
 
-      iron-icon {
-        --iron-icon-width: 64px;
-        --iron-icon-height: 64px;
-        --iron-icon-stroke-color: #c1c1c1;
-        --iron-icon-fill-color: #c1c1c1;
-        float: left;
-        margin-right: 20px;
-      }
       paper-item:not(:last-of-type) {
         margin-bottom: 20px;
       }
-      paper-item-body > * {
-        float: left;
+      paper-icon-item > iron-icon {
+        --iron-icon-height: 64px;
+        --iron-icon-width: 64px;
+        margin-right: 20px;
       }
-
-
-      .msg-detail {
-        @apply(--layout-horizontal);
-        @apply(--layout-center);
-        height: 120px;
-      }
-
     </style>
     <template is="dom-repeat" items="{{ listItems }}">
     <paper-card class="full-width-card" heading="{{ _dateFilter(item.date) }}">
       <div class="card-content">
         <paper-listbox>
           <template is="dom-repeat" items="{{ item.messages }}" as="message">
-            <paper-item>
-              <paper-item-body class="layout horizontal flex flex">
-                <iron-icon icon="account-circle"></iron-icon>
-                <div class="">
-                  <div>{{ message.author }}</div>
-                  <div>{{ message.msg }}</div>
-                </div>
+            <paper-icon-item>
+              <iron-icon icon="account-circle"></iron-icon>
+              <paper-item-body two-line>
+                <div>{{ message.author }}</div>
+                <div secondary>{{ message.msg }}</div>
               </paper-item-body>
-            </paper-item>
+            </paper-icon-item>
           </template>
 
 
